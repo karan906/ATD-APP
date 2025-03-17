@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.atd-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sensorInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+    border: 2px solid #555;
+    border-radius: 5px;
+    outline: none;
+}
+
+#error-msg {
+    color: red;
+    font-size: 14px;
+}
+
+.atd-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid black;
+    top: 10px;
+    left: 70px;
+}
+
+.sensor-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+}
+
+.G { background-color: green; }
+.R { background-color: red; }
+.Y { background-color: yellow; }
+
+.sensor-1 { top: 0px; left: 85px; }
+.sensor-2 { top: 55px; left: 85px; }
+.sensor-3 { top: 75px; left: -5px; }
+.sensor-4 { top: 100px; left: 35px; }
+.sensor-5 { top: 100px; left: 85px; }
+.sensor-6 { top: 80px; left: 155px; }
+.sensor-7 { top: 200px; left: 40px; }
+.sensor-8 { top: 150px; left: 85px; }
+.sensor-9 { top: 200px; left: 130px; }
+
+.line {
+    position: absolute;
+    background-color: black;
+    transform-origin: top left;
+}
+
+.line-neck-chest { width: 3px; height: 30px; top: 75px; left: 98px; }
+.line-left-arm { width: 40px; height: 3px; top: 115px; left: 50px; }
+.line-left-wrist { width: 40px; height: 3px; top: 96px; left: 8px; transform: rotate(30deg); }
+.line-right-arm { width: 40px; height: 3px; top: 115px; left: 100px; }
+.line-right-wrist { width: 40px; height: 3px; top: 115px; left: 138px; transform: rotate(-30deg); }
+.line-chest-waist { width: 3px; height: 50px; top: 115px; left: 98px; }
+.line-left-leg { width: 50px; height: 3px; top: 200px; left: 55px; transform: rotate(-30deg); }
+.line-right-leg { width: 50px; height: 3px; top: 175px; left: 100px; transform: rotate(30deg); }

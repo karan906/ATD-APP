@@ -1,0 +1,24 @@
+<div class="atd-wrapper">
+    <div class="input-container">
+        <label for="sensorInput">Sensor Status (9 characters):</label>
+        <input type="text" id="sensorInput" [(ngModel)]="sensorStatus" (input)="updateSensors()">
+        <p *ngIf="error" id="error-msg">{{ error }}</p>
+    </div>
+    
+    <div class="atd-container">
+        <div class="head"></div>
+    
+        <div class="line line-neck-chest"></div>
+        <div class="line line-left-arm"></div>
+        <div class="line line-left-wrist"></div>
+        <div class="line line-right-arm"></div>
+        <div class="line line-right-wrist"></div>
+        <div class="line line-chest-waist"></div>
+        <div class="line line-left-leg"></div>
+        <div class="line line-right-leg"></div>
+    
+        <div *ngFor="let sensor of sensors; let i = index" class="sensor-dot sensor-{{i+1}}" [ngClass]="sensor.status">
+            {{ i + 1 }}
+        </div>
+    </div>
+</div>
