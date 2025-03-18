@@ -10,27 +10,25 @@ import { FormsModule } from '@angular/forms';
 })
 export class TestAtdComponent {
 
- public sensorStatus: string = 'GGGGGGGGG'; // Default Sensor Status
+ public sensorDefaultValue: string = 'GGGGGGGGG'; 
  public sensors: { status: string }[] = [];
- public error: string = '';
+ public errorMsg: string = '';
 
   constructor() {
-    this.updateSensors();
+    this.sensorsUpdated();
   }
 
-  updateSensors() {
-    if (this.sensorStatus.length !== 9) {
-      this.error = 'Input must be 9 characters long.';
+  sensorsUpdated() {
+    if (this.sensorDefaultValue.length !== 9) {
+      this.errorMsg = 'Input must be 9 characters long.';
       return;
     }
-
-    if (!/^[GRY]+$/.test(this.sensorStatus)) {
-      this.error = 'Input must contain only G, R, or Y characters.';
+    if (!/^[GRY]+$/.test(this.sensorDefaultValue)) {
+      this.errorMsg = 'Input must contain only G, R, or Y characters.';
       return;
     }
-    this.error = '';
-
-    this.sensors = this.sensorStatus.split('').map(status => ({ status }));
+    this.errorMsg = '';
+    this.sensors = this.sensorDefaultValue.split('').map(status => ({ status }));
   }
 
 }
